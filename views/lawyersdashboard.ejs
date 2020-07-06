@@ -1,94 +1,435 @@
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-<div class="container">
- 
-    <div class="row mt-5 justify-content-center">
-	<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-	
-	<div class="col-md-5">
-<div class="card mb-3">
-  <h3 class="card-header">SEALED APP  </h3> 
-  <div class="card-body">
-    <h5 class="card-title">Welcome,  <%= user.name %> </h5>
-    <h6 class="card-subtitle text-muted">User Dashboard</h6>
+  * {
+  
+  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans', sans-serif
+  }
+   
+    a:hover {
+    transform: skew(-10deg);
+  }
+   
+  
+  .page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  
+  html,
+  body {
+      height: 60%
+  }
+  
+  body {
+      display: grid;
+      place-items: center;
+      background: #eee
+  }
+  
+  
+  
+  .hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+  }
+  
+  
+  .card {
+      width: 330px;
+      border-radius: 50px;
+      background: #eeeeee;
+      box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+      border: none
+  }
+  
+  .neo-button {
+      width: 40px;
+      height: 40px;
+      outline: 0 !important;
+      cursor: pointer;
+      color: #fff;
+      font-size: 15px;
+      border: none;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #d6d6d6, #ffffff);
+      box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
+  }
+  
+  .neo-button:active {
+      border-radius: 50%;
+      background: linear-gradient(145deg, #d6d6d6, #ffffff);
+      box-shadow: inset 20px 20px 60px #cacaca, inset -20px -20px 60px #ffffff
+  }
+  
+  .fa-facebook {
+      color: #3b5998
+  }
+  
+  .fa-linkedin {
+      color: #0077b5
+  }
+  
+  .fa-google {
+      color: #dc4e41
+  }
+  
+  .fa-youtube {
+      color: #cd201f
+  }
+  
+  .fa-twitter {
+      color: #55acee
+  }
+  
+  
+  </style>
+                                  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                  <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+                                  <script type='text/javascript'></script>
+                              </head>
+                              <body>
+                
+                
+                
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
     
-  </div>
-
-
- <div class="align-items-center  mx-auto">
-<div class="card text-white bg-success mb-3 shadow-lg p-4 mb-4 bg-white" style="border: 10px solid grey; border-radius: 100px;">
-    <div class="card-body">
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
         
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+  <div class="container">
+  
+  <div class="page-header">
+      <h1>Sealed App </h1><br/>
+    <p style="padding-left: 50px;">Lawyer Dashboard</p>
+  </div>
+  
+  
+  
+                
+                
+                
+                              <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                <div class="col">
+      <div class="card p-3 py-4">
+          <div class="text-center"> <img src="/images/sealedicon.jpg" width="100" class="rounded-circle">
+              <h5 class="mt-2">Welcome <%= lawyeruser.name %> </h5> <span class="mt-1 clearfix"> <%= lawyeruser.specialty %> </span><p> <small class="mt-4">Civil Lawyer with 5 years Litigation experience</small></p>
+             <span class="badge badge-secondary">Lagos, Nigeria</span>
+  <span class="badge badge-success">Civil Law</span>
+  <span class="badge badge-danger">5 Years Practice</span><br/>
+  <span class="badge badge-warning">Sealed-Verified</span>
+        
+        
+        <div class="social-buttons mt-5"> <button class="neo-button"> <i class="fa fa-sign-out fa-1x" style="color:red;"></i>  </button> Logout
+  
+  
+  
+        </div>
+          </div>
+      </div>
+    
+    </div>
+    <div class="col" style="height: 100%;">
+     <div class="card p-3 py-4" style="height: auto;">
+         
+      <div class="row justify-content-center" style="border: 2px solid back; height: auto;">
+                                                                                                                                                                                                                                                                                                                                                                                                      
+      
+      <div class="row justify-content-center" style="border: 2px solid gren; height: 15%; width: 100%; padding-top: 6px;"><h5> Profile Activities </h5> </div>
+      
+      
+      <div class="row" style="border: 2px solid ble; height: 30%; width: 100%;">
+      
+      
+      
+      
+      
+      <div class="col justify-content-center align-items-center text-center"><button class="neo-button"> <i class="fa fa-search-plus fa-1x" style="color:red;"></i></button>  In Need?
+        
+      
+      <div class="text-center">
+      
+      
+      <div class="card-body" style="text-align: center">
+      
+      <!-- Link trigger modal -->
+      <a href="#exampleModalCenter" data-toggle="modal">Find Lawyer</a>
+      </div>
+    
+      
+      
+      
+      <!-- //MODAL  -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Locate a Lawyer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <h5>Search</h5>
+  
+  
+  
+  
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-  <div class="card-body">
+      
     
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="/findlawyer" class="card-link">Find a Lawyer</a></li>
-    <li class="list-group-item"><a href="/registercompany/registercompany" class="card-link">Register Your Company/ Enterprise</a></li>
-    <li class="list-group-item"><a href="/changename" class="card-link">Change of Name</a></li>
-   <li class="list-group-item"><a href="generatewill" class="card-link">Generate Will</a></li>
-   <li class="list-group-item"><a href="generateod" class="card-link">Generate Other Legal Documents</a></li>
-   <li class="list-group-item"><a href="#" class="card-link">Generate Will/Legal Documents</a></li>
-  </ul>
-  <div class="card-footer text-muted">
-    Copyright (c) Sealed App Limited
-  </div>
-</div>
-
-
-</div>
-
-
-<div class="col-md-4">
-
-
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    Activities
-    <a href="/users/logout" <button class="btn btn-secondary float-right my-2 my-sm-0 align-items-end" type="submit">Logout</button></a>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Message:
-    <span class="badge badge-primary badge-pill">14</span>
-    </a>
-
-</a>
-<a href="#" class="list-group-item list-group-item-action">Message:
-<span class="badge badge-primary badge-pill">14</span>
-</a>
-<a href="#" class="list-group-item list-group-item-action">Message:
-  <span class="badge badge-primary badge-pill">14</span>
-  </a>
-</div>
-
-<div class="card text-white bg-info mb-3">
-  <div class="card-header">On-going Projects</div>
-  <div class="card-body">
-    <h4 class="card-title">Ongoing Tasks</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-
-<div class="card text-white bg-success mb-3">
-  <div class="card-header">Project Turn-around Timer</div>
-  <div class="card-body">
-    <h4 class="card-title">Success card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-    
-
-
-
-
+      
+      
+      
+      
+      
+      
+      </div>
+      </div>
+      
+      <div class="col" style="padding-left: 10px;"> <button class="neo-button"> <i class="fa fa-check-circle-o fa-1x" style="color:red;"></i></button> Messages
+      
+      
+      
+      <!-- //MESSAGES MODAL -->
   
-</div>
-
-</div>
-</div>
-
+    
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenterMessages" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">MESSAGES</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <h5>All Messages</h5>
+      <div class="row">
+  
+  <div class="col" style="border: 2px dotted blue; margin: 4px; padding: auto; border-radius: 25px;"><h5>View Messages</h5><hr/><div>
+  
+  
+  
+  
+  <div class="row">3</div><hr/>
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  </div>
+  
+  <div class="col" style="border: 2px dotted red; margin: 4px; padding: auto; border-radius: 25px;"<h5> Send New Message</h5><hr/>
+  
+  <div>
+  
+  <form>
+  
+  
+  
+  
+  </form>
+  
+  </div>
+  </div>
+  
+  
+      </div>
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+      
+      <div class="card-body" style="text-align: center">
+      <a href="#exampleModalCenterMessages" data-toggle="modal">View</a>&#8287; &#8287;
+      <a href="#exampleModalCenterMessages" data-toggle="modal">Send</a>
+      </div>
+    
+      
+  
+      
+      
+      
+      </div>
+      
+  
+      
+             </div>
+         
+         <hr/>
+         
+         <div class="row" style="border: 2px solid reed; height: 30%; width: 100%; padding-top: 50px;">
+      
+      
+      
+      <div class="col text-center"> <button class="neo-button"> <i class="fa fa-bank fa-1x" style="color:red;"></i></button> Projects
+      
+      <div class="card-body" style="text-align: center">
+      
+      
+          
+    
+  
+  <!-- PROJECTS MODAL -->
+  
+  <div class="modal fade" id="exampleModalCenterProjects" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Projects Summary</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <h5>Assigned Projects</h5>
+      <div class="row">
+  
+  <div class="col" style="border: 2px dotted blue; margin: 4px; padding: auto; border-radius: 25px;"><h5>On-going Projects</h5><hr/><div>
+  
+  
+  
+  
+  <div class="row">Registration of ISOP NGO</div><hr/>
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  </div>
+  
+  <div class="col" style="border: 2px dotted red; margin: 4px; padding: auto; border-radius: 25px;"<h5> Completed Projects</h5><hr/>
+  
+  <div>
+  
+  
+  
+  
+  <div class="row">Task 1</div><hr/>
+  
+  <div class="row">Task 2</div><hr/>
+  <div class="row">Task 3</div><hr/>
+  <div class="row">Task 4</div><hr/>
+  
+  
+  
+  
+  
+  </div>
+  </div>
+  
+  
+      </div>
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <a href="#exampleModalCenterProjects" data-toggle="modal">History</a>
+  <a href="#" data-toggle="modal">Manager</a>
+  
+      
+      </div>
+      </div>
+      
+      <div class="col text-center">  <button class="neo-button"> <i class="fa fa-clock-o fa-1x" style="color:red;"></i></button> Timer
+      
+      <div class="card-body" style="text-align: center">
+      <p>Present Task:</p>
+      <span id="demo" class="badge badge-pill badge-light"></span>
+    </div>
+      
+      
+      
+      
+      </div>
+      
+      
+      
+             </div>
+        
+        
+         
+         
+         
+         
+         
+         
+         
+                 </div>
+     
+    </div>
+    
+  </div> 
+  
+  </div> 
+  
+  
+  
+  </div>
+  
+  </div>

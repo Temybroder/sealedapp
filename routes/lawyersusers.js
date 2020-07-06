@@ -79,7 +79,7 @@ router.post('/lawyersregister', (req, res) => {
 // Login
 router.post('/lawyerslogin', (req, res, next) => {
   passport.authenticate('local', {
-    successRedirect: '/lawyersdashboard',
+    successRedirect: '/lawyersusers/lawyersdashboard',
     failureRedirect: '/lawyersusers/lawyerslogin',
     failureFlash: true
   })(req, res, next);
