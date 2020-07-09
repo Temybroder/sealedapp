@@ -16,7 +16,7 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
 // Lawyers Dashboard
 router.get('/lawyersdashboard', ensureAuthenticated, (req, res) =>
   res.render('lawyersdashboard', {
-    user: req.user
+    lawyerUser: req.lawyerUuser
   })
 );
  
