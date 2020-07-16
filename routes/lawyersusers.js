@@ -16,7 +16,7 @@ router.get('/lawyersregister', forwardAuthenticated, (req, res) => res.render('l
 router.post('/lawyersregister', (req, res) => {
   const { name, email, password, password2 } = req.body;
   let errors = [];
-
+      
   if (!name || !email || !password || !password2) {
     errors.push({ msg: 'Please enter all fields' });
   }
@@ -38,7 +38,7 @@ router.post('/lawyersregister', (req, res) => {
       password2
     });
   } else {
-    lawyerUser.findOne({ email: email }).then(lawyeruser => {
+    lawyerUser.findOne({ email: email }).then(lawyerUser => {
       if (lawyerUser) {
         errors.push({ msg: 'Email already exists' });
         res.render('lawyersregister', {

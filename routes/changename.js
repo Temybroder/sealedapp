@@ -24,6 +24,9 @@ router.get('/namepunch', ensureAuthenticated, (req, res) =>
 
 
 
+
+
+
 //Change Name Sun Newspaper
 
 router.get('/namethesun', ensureAuthenticated, (req, res) =>
@@ -31,9 +34,6 @@ router.get('/namethesun', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
-
-
-
 
 
 
@@ -48,7 +48,6 @@ router.get('/nameguardian', ensureAuthenticated, (req, res) =>
 
 
 
-
 //Change Name Thisday Newspaper
 
 router.get('/namethisday', ensureAuthenticated, (req, res) =>
@@ -58,6 +57,10 @@ router.get('/namethisday', ensureAuthenticated, (req, res) =>
 );
  
 
+
+
+
+
 //Change Name Vanguard Newspaper
 
 router.get('/namevanguard', ensureAuthenticated, (req, res) =>
@@ -65,7 +68,6 @@ router.get('/namevanguard', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
- 
 
 
 

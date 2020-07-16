@@ -4,6 +4,11 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+const crypto = require("crypto");
+const path = require("path");
+const multer = require("multer");
+const GridFsStorage = require("multer-gridfs-storage");
+
 
 const app = express();
 
@@ -21,6 +26,10 @@ mongoose
   )
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
+
+
+
+
 
 // EJS
 app.use(expressLayouts);
@@ -60,9 +69,14 @@ app.use('/lawyersusers', require('./routes/lawyersusers.js'));
 app.use('/registercompany', require('./routes/registercompany.js'));
 app.use('/findlawyer', require('./routes/findlawyer.js'));
 app.use('/changename', require('./routes/changename.js'));
+app.use('/gridfs', require('./routes/gridfs.js'));
 
 app.use( express.static( "public" ) );
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+
+
+// PWA SERVICE WORKER

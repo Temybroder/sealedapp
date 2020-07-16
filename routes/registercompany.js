@@ -26,8 +26,13 @@ router.get('/privatelimited', ensureAuthenticated, (req, res) =>
 
 
 
-//Register Limited by guarantee company 
-
+//Register Limited by guarantee via Form Filling
+router.get('/limitedbyguarantee', ensureAuthenticated, (req, res) =>
+  res.render('limitedbyguarantee', {
+    user: req.user
+  })
+);
+//Register Limited by guarantee via Details Upload
 router.get('/limitedbyguarantee', ensureAuthenticated, (req, res) =>
   res.render('limitedbyguarantee', {
     user: req.user
@@ -38,17 +43,18 @@ router.get('/limitedbyguarantee', ensureAuthenticated, (req, res) =>
 
 
 
-
-//Register Business Name
-
+//Register Business Name via Form Filling
 router.get('/bizname', ensureAuthenticated, (req, res) =>
   res.render('bizname', {
     user: req.user
   })
 );
-
-
-
+//Register Business Name via Details Upload
+router.get('/uploadbizname', ensureAuthenticated, (req, res) =>
+  res.render('uploadbizname', {
+    user: req.user
+  })
+);
 
 
 //Register Cooperative
@@ -58,7 +64,12 @@ router.get('/cooperative', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
- 
+ //Register Cooperative via Details Upload
+router.get('/uploadcoop', ensureAuthenticated, (req, res) =>
+res.render('uploadcoop', {
+  user: req.user
+})
+);
 
 
 

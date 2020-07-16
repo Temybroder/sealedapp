@@ -1,0 +1,59 @@
+   
+
+
+     
+     <div class="row mt-4 mb-2">
+        <div class="col-md-4 m-auto">
+          <div class="card card-body">
+  
+    <div class="card text-white bg-info md-6" style="border-radius: 20px;">
+      <div class="card-header" style="text-align:center;"><h4><b>Register Company</b>:<br/<i>Limited by Guarantee</i></h4></div>
+    
+    </div>
+             <% include ./partials/messages %>
+  <br/>
+         <form action="/gridfs/upload" method="POST" enctype="multipart/form-data">
+                                <div class="text-center">
+                                 
+                                    <span class="badge badge-pill badge-secondary mb-3">Company Registration Service </span>
+    
+                                        <h4> Please fill in the Required Data on Paper and Upload a clear snapshot </h4>
+
+                                        <hr/>   
+
+                                        <div class="form-row justify-content-center">
+                                          <div class="form-group md-6">
+    
+                                          <label class="mr-2"> <a href="/gridfs/upload"> <i class="fa fa-camera" aria-hidden="true"></i>  Take a Snapshot </a></label>
+                                         
+                                        </div>
+                                    </div>
+                                        <p>OR</p>
+                                    <hr/>   
+
+                                      <div class="form-row">
+                                        <div class="form-group md-6">
+  
+                                        <label class="mr-2">Upload Here </label>
+                                        <input type="file" id="myfile1" name="file">
+                                      </div>
+                                  </div>
+  
+
+                                  <div class="form-row justify-content-center">
+                                      <div class="form-group mt-3">
+                                    
+                                        <button type="submit" class="btn btn-info" style="border-radius: 30px;">Submit for Processing</button>&nbsp&nbsp&nbsp <a href="/dashboard">BACK</a>
+                                      </div>
+                                  </div>
+                                 
+
+
+								                   </div>
+                                    </form>
+
+     </div>
+   
+
+    </div>
+   </div>
