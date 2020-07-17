@@ -12,45 +12,46 @@
     </div>
              <% include ./partials/messages %>
   <br/>
-         <form action="/gridfs/upload" method="POST" enctype="multipart/form-data">
-                                <div class="text-center">
-                                 
-                                    <span class="badge badge-pill badge-secondary mb-3">Company Registration Service </span>
-    
-                                        <h4> Please fill in the Required Data on Paper and Upload a clear snapshot </h4>
+  <form action="/gridfs/upload" method="POST" enctype="multipart/form-data">
+    <div class="text-center">
+     
+        <span class="badge badge-pill badge-secondary mb-3">Company Registration Service </span>
 
-                                        <hr/>   
+            <h4> Please fill in the Required Data on Paper and Upload a clear snapshot </h4>
 
-                                        <div class="form-row justify-content-center">
-                                          <div class="form-group md-6">
-    
-                                          <label class="mr-2"> <a href="/gridfs/upload"> <i class="fa fa-camera" aria-hidden="true"></i>  Take a Snapshot </a></label>
-                                         
-                                        </div>
-                                    </div>
-                                        <p>OR</p>
-                                    <hr/>   
+            <hr/>   
 
-                                      <div class="form-row">
-                                        <div class="form-group md-6">
-  
-                                        <label class="mr-2">Upload Here </label>
-                                        <input type="file" id="myfile1" name="file">
-                                      </div>
-                                  </div>
-  
+            <div class="form-row justify-content-center">
+              <div class="form-group md-6">
 
-                                  <div class="form-row justify-content-center">
-                                      <div class="form-group mt-3">
-                                    
-                                        <button type="submit" class="btn btn-info" style="border-radius: 30px;">Submit for Processing</button>&nbsp&nbsp&nbsp <a href="/dashboard">BACK</a>
-                                      </div>
-                                  </div>
-                                 
+              <label class="mr-2"> <a href="#"> <i class="fa fa-camera" aria-hidden="true"></i>  Take a Snapshot </a></label>
+             
+            </div>
+        </div>
+            <p>OR</p>
+        
+
+          <div class="form-row">
+            <div class="form-group md-6">
+
+            <label class="mr-2">Upload the Snapshot </label>
+            <input type="file" id="myfile1" name="file">
+          </div>
+      </div>
+      <hr/> 
+      by Clicking Choose File below <i class="fa fa-arrow-down" aria-hidden="true"></i>
+
+      <div class="form-row justify-content-center">
+          <div class="form-group mt-3">
+        
+            <button type="submit" class="btn btn-info" style="border-radius: 30px;">Submit for Processing</button>&nbsp&nbsp&nbsp <a href="/dashboard">BACK</a>
+          </div>
+      </div>
+     
 
 
-								                   </div>
-                                    </form>
+       </div>
+        </form>
 
      </div>
    
