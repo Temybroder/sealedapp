@@ -21,22 +21,22 @@
                                         <div class="form-row justify-content-center">
                                           <div class="form-group md-6">
     
-                                          <label class="mr-2"> <a href="#"> <i class="fa fa-camera" aria-hidden="true"></i>  Take a Snapshot </a></label>
+                                          <label class="mr-2"> <a href="#"> <i class="fa fa-camera" aria-hidden="true"></i>  Take or Upload the Snapshot </a></label>
                                          
                                         </div>
                                     </div>
-                                        <p>OR</p>
+                                        <p>BY</p>
                                     
 
                                       <div class="form-row">
                                         <div class="form-group md-6">
   
-                                        <label class="mr-2">Upload the Snapshot </label>
+                                        <label class="mr-2"> <i class="fa fa-arrow-down" aria-hidden="true"></i>  &nbsp&nbsp&nbsp Clicking Choose File below  </label>
                                         <input type="file" id="myfile1" name="file">
                                       </div>
                                   </div>
                                   <hr/> 
-                                  by Clicking Choose File below <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                  
 
                                   <div class="form-row justify-content-center">
                                       <div class="form-group mt-3">
@@ -55,33 +55,9 @@
 
     </div>
 
-    <div class="col-md-3 m-auto" style="border: 2px solid reed;">
-                                      <div class="card mb-3">
-                                        <div class="card-header">
-                                          <div class="card-title">
-                                             Captured Shot
-                                          </div>
-                                        </div>
-                                        <div class="card-body">
-                                          <% if (file.isImage) { %>
-                                          <img src="image/<%= file.filename %>" width="200" alt="" class="img-responsive"> 
-                                          <%} else { %>
-                                          <a href="image/<%= file.filename %>" download><%= file.filename %></a>
-                                          <% } %>
-                                        </div>
-                                        <div class="card-footer">
-                                          <form action="/files/del/<%= file._id %>" method="post">
-                                            <button type="submit" class="btn btn-danger">Remove</button>
-                                          </form>
-                                        </div>
-                                      </div>
-      
-
-
 
 
 </div>
 
 
 
-   </div>
