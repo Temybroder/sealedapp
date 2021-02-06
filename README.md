@@ -1,8 +1,8 @@
-# Node.js & Passport Login
+# SealedApp
 
 This is a Virtualized Legal documentation app using Node.js, Express, Passport, Mongoose, EJS and some other packages. The app has a powerful Search feature, File Processing, among other features.
 
-### Version: 2.0.0
+### Version: 1.0.0
 
 ### Usage
 
